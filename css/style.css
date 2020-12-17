@@ -1,12 +1,65 @@
 #model-container {
-    position: absolute;
+    position: relative;
     left:0;
-    top:0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: calc(100vh - 64px);
 }
 
 #viewer {
     width: 100%;
     height: 100%;
+}
+
+.container {
+    margin: 0;
+    width: 100vw;
+}
+.row {
+    width: 100vw;
+}
+
+.row div {
+    padding: 0;
+}
+
+.right-box {
+    background-color: gray;
+    padding: 14px !important;
+}
+
+.title {
+    border-bottom: white 1px solid;
+}
+
+.custom-row {
+    width: 100%;
+}
+.random-img {
+    width: 100%;
+}
+
+.footer {
+    background-color: #37393a;
+    width: 100vw;
+    left:0;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-div {
+    padding: 4px;
+}
+
+#load-text {
+    margin-top: 32px;
+
+}
+
+#load-text p {
+    font-size: 32px;
+    background-color: orange;
+    margin: 100px;
+    border-radius: 16px;
+    padding: 10px;
+    border: red dashed 1px;
 }

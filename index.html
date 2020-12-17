@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
     <meta charset="UTF-8">
@@ -8,9 +10,79 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
-<div id="model-container">
-    <model-viewer id="viewer" src="models/flojt.glb" alt="A 3D model of an astronaut" loading="eager" poster="img/poster1.png" autoplay animation-name="929_flojtur_CADprep_jh_18" auto-rotate camera-controls oncontextmenu="return false;"></model-viewer>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Flöjtur</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Can't press this</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <div id="model-container">
+                <model-viewer id="viewer" src="models/flojt.glb" alt="Flöjtur modell" loading="eager" autoplay animation-name="929_flojtur_CADprep_jh_18" auto-rotate camera-controls oncontextmenu="return false;">
+                    <div id="load-text" class="text-center" slot="poster">
+                        <p>Loading flöjtur model</p>
+                    </div>
+                </model-viewer>
+            </div>
+        </div>
+        <div class="col-sm-3 right-box">
+            <div class="text-center">
+                <p class="fs-1 align-middle title">Flöjtur</p>
+            </div>
+            <p>Detta fina flöjturet byggdes ett årtal, jag vet inte mycket om det så jag ska se hur mycket jag kan dryga ut denna text. Jag har lång erfarenhet av att göra så och ska därför ta användning av den kunskapen. Jag fick lära mig detta tidigt då det var viktigt att kunna få text att se fylligare ut utan att lägga till något av värde i texten. Det verkar funka eftersom du fortfarande läser denna texten.</p>
+            <hr>
+            <p>Här är nästa stiliga text utan nyttigt innehåll. Visste du att flöjturet har massa spännande fakta som jag hade berättat om jag hade vetat dem. Istället ska jag bara dryga ut denna texten med poänglösa tomma ord.</p>
+            <hr>
+            <p>Jag börjar få slut på ideer om vad jag bör skriva för att fylla ut textboxen, kanske ska jag bara lägga in en slumpmässig bild av något som kan ha med detta temat att göra?</p>
+            <div class="custom-row">
+                <div class="col">
+                    <img class="random-img" src="https://static.boredpanda.com/blog/wp-content/uploads/2018/03/ugly-medieval-cats-art-fb10__700-png.jpg">
+                </div>
+                <div class="col">
+                    <p>Detta är en katt från medeltiden tydligen, det räknas dock nog som tiden innan detta flöjturet uppfanns men jag har inte kollat när denna målades</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container text-center footer-div">
+            <span class="text-secondary">Här är botten av hemsidan</span>
+        </div>
+    </footer>
 </div>
+
 
 <script src="scripts/flojtScript.js">
 
