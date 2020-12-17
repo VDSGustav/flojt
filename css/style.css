@@ -41,9 +41,7 @@
 .footer {
     background-color: #37393a;
     width: 100vw;
-    left:0;
-    position: absolute;
-    bottom: 0;
+    margin-left: -12px;
 }
 
 .footer-div {
